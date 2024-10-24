@@ -112,15 +112,21 @@
             border-radius: 8px;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
+        .tips {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .gallery img {
-            width: 100%;
+        .tips li {
+            background-color: #f7f7fa;
+            margin: 10px 0;
+            padding: 15px;
             border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .tips li:hover {
+            background-color: #e8eaf6;
         }
 
         @media (max-width: 768px) {
@@ -208,13 +214,15 @@
         </div>
 
         <div class="section">
-            <h2>Galería de Imágenes</h2>
-            <div class="gallery">
-                <img src="imagen1.jpg" alt="Reparación de PC">
-                <img src="imagen2.jpg" alt="Componentes de PC">
-                <img src="imagen3.jpg" alt="Taller de reparación">
-                <img src="imagen4.jpg" alt="Componentes en venta">
-            </div>
+            <h2>Consejos para el Mantenimiento de tu PC</h2>
+            <p>A continuación, algunos consejos útiles para mantener tu PC en excelente estado:</p>
+            <ul class="tips">
+                <li><strong>Limpieza Regular:</strong> Mantén tu PC limpio por fuera y por dentro. El polvo puede afectar el rendimiento y la temperatura.</li>
+                <li><strong>Actualiza tus Drivers:</strong> Mantén los controladores de tu hardware actualizados para asegurar compatibilidad y rendimiento.</li>
+                <li><strong>Monitorea las Temperaturas:</strong> Usa software para monitorear las temperaturas de la CPU y GPU, y asegúrate de que no se sobrecalienten.</li>
+                <li><strong>Haz Copias de Seguridad:</strong> Realiza copias de seguridad de tus datos importantes con regularidad para evitar pérdidas.</li>
+                <li><strong>Desfragmenta el Disco Duro:</strong> Si usas un disco duro mecánico, desfragmentarlo puede mejorar el rendimiento.</li>
+            </ul>
         </div>
 
     </div>
@@ -223,8 +231,8 @@
         <p>&copy; 2024 Smart Fix - Todos los derechos reservados</p>
         <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank" title="Facebook" aria-label="Facebook">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank" title="Instagram" aria-label="Instagram">Instagram</a>
             <a href="https://www.twitter.com" target="_blank" title="Twitter" aria-label="Twitter">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram" aria-label="Instagram">Instagram</a>
         </div>
         <p><a href="/privacy-policy" style="color:white;">Política de Privacidad</a> | <a href="/terms" style="color:white;">Términos de Servicio</a></p>
     </footer>
