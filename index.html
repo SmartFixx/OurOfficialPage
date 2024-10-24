@@ -74,21 +74,6 @@
             transform: scale(1.05);
         }
 
-        .testimonial {
-            background-color: #f7f7fa;
-            padding: 20px;
-            border-radius: 8px;
-            font-style: italic;
-            margin: 20px 0;
-            color: #333;
-            border-left: 4px solid #311b92;
-            transition: background-color 0.3s;
-        }
-
-        .testimonial:hover {
-            background-color: #e8eaf6;
-        }
-
         footer {
             background-color: #311b92;
             color: white;
@@ -116,6 +101,28 @@
             color: #f4f4f9; /* Cambia el color al pasar el mouse */
         }
 
+        .faq {
+            margin: 20px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #d1c4e9;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
@@ -132,42 +139,6 @@
             .cta-button {
                 padding: 10px 20px;
             }
-        }
-
-        /* Estilos para el formulario de contacto */
-        .contact-form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Espacio entre los campos */
-        }
-        
-        .form-group {
-            flex: 1;
-            min-width: 250px; /* Tamaño mínimo de los campos */
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        
-        .form-group input, .form-group textarea {
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-        
-        textarea {
-            height: 100px; /* Altura del campo de texto */
-            resize: vertical; /* Permitir cambiar el tamaño vertical */
-        }
-
-        button.cta-button {
-            margin-top: 10px;
-            align-self: flex-start;
         }
     </style>
 </head>
@@ -195,30 +166,16 @@
                 <li><strong>Experiencia comprobada:</strong> Con años en el mercado, sabemos lo que hacemos.</li>
                 <li><strong>Atención personalizada:</strong> Nos preocupamos por entender y resolver tus necesidades específicas.</li>
             </ul>
-            <a href="#contacto" class="cta-button">Contáctanos ahora</a>
+            <a href="#componentes" class="cta-button">Ver Componentes y PCs</a>
         </div>
 
-        <div class="section">
-            <h2>Testimonios de nuestros clientes</h2>
-            <div class="testimonial">
-                <p>"Gracias a Smart Fix, la PC de mi hijo funciona excelentemente." - Fernando R.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Blog: Mejora y Mantenimiento de PCs de Torre</h2>
-            <p>Bienvenido a nuestro blog, donde compartimos consejos útiles y artículos sobre el mantenimiento y la mejora de tu PC de torre. Mantente informado sobre las últimas tendencias y aprende cómo sacar el máximo provecho a tus componentes.</p>
-            
+        <div class="section" id="componentes">
+            <h2>Componentes y PCs de Torre</h2>
+            <p>Ofrecemos una amplia gama de componentes y PCs de torre que se adaptan a tus necesidades:</p>
             <article>
-                <h3>Cómo Elegir los Mejores Componentes para Tu PC de Torre</h3>
-                <p>Elegir los componentes adecuados puede ser abrumador. En este artículo, te ayudaremos a seleccionar los mejores procesadores, tarjetas gráficas y más para tu configuración ideal.</p>
-                <a href="/blog/como-elegir-componentes-pc" class="cta-button">Leer más</a>
-            </article>
-
-            <article>
-                <h3>Consejos para Mantener Tu PC de Torre en Óptimas Condiciones</h3>
-                <p>Mantener tu PC en buen estado es crucial para su rendimiento. Aquí te damos algunos consejos sobre limpieza, actualizaciones y mantenimiento general.</p>
-                <a href="/blog/consejos-mantenimiento-pc" class="cta-button">Leer más</a>
+                <h3>Componentes de PC Disponibles</h3>
+                <p>Explora nuestra selección de tarjetas madre, fuentes de alimentación, y más, ideales para cualquier proyecto de PC.</p>
+                <a href="/blog/componentes-pc" class="cta-button">Leer más</a>
             </article>
 
             <article>
@@ -234,36 +191,42 @@
             </article>
         </div>
 
+        <div class="section faq">
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+            <div class="faq-item">
+                <strong>¿Cuánto tiempo tarda una reparación?</strong>
+                <p>El tiempo de reparación depende del tipo de problema, pero generalmente tomamos entre 1 y 3 días.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Ofrecen garantía en sus reparaciones?</strong>
+                <p>Sí, todas nuestras reparaciones cuentan con una garantía de 30 días.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Realizan reparaciones a domicilio?</strong>
+                <p>Ofrecemos servicios a domicilio en ciertas áreas. Contáctanos para más información.</p>
+            </div>
+        </div>
+
         <div class="section">
-            <h2>Formulario de Contacto</h2>
-            <form action="enviar_mensaje.php" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="cta-button">Enviar Mensaje</button>
-                </div>
-            </form>
+            <h2>Galería de Imágenes</h2>
+            <div class="gallery">
+                <img src="imagen1.jpg" alt="Reparación de PC">
+                <img src="imagen2.jpg" alt="Componentes de PC">
+                <img src="imagen3.jpg" alt="Taller de reparación">
+                <img src="imagen4.jpg" alt="Componentes en venta">
+            </div>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2024 Smart Fix. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Smart Fix - Todos los derechos reservados</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook" aria-label="Facebook">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram" aria-label="Instagram">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter" aria-label="Twitter">Twitter</a>
         </div>
+        <p><a href="/privacy-policy" style="color:white;">Política de Privacidad</a> | <a href="/terms" style="color:white;">Términos de Servicio</a></p>
     </footer>
 
 </body>
