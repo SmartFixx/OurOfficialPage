@@ -133,6 +133,42 @@
                 padding: 10px 20px;
             }
         }
+
+        /* Estilos para el formulario de contacto */
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Espacio entre los campos */
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 250px; /* Tamaño mínimo de los campos */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        textarea {
+            height: 100px; /* Altura del campo de texto */
+            resize: vertical; /* Permitir cambiar el tamaño vertical */
+        }
+
+        button.cta-button {
+            margin-top: 10px;
+            align-self: flex-start;
+        }
     </style>
 </head>
 <body>
@@ -169,6 +205,35 @@
             </div>
         </div>
 
+        <div class="section">
+            <h2>Blog: Mejora y Mantenimiento de PCs de Torre</h2>
+            <p>Bienvenido a nuestro blog, donde compartimos consejos útiles y artículos sobre el mantenimiento y la mejora de tu PC de torre. Mantente informado sobre las últimas tendencias y aprende cómo sacar el máximo provecho a tus componentes.</p>
+            
+            <article>
+                <h3>Cómo Elegir los Mejores Componentes para Tu PC de Torre</h3>
+                <p>Elegir los componentes adecuados puede ser abrumador. En este artículo, te ayudaremos a seleccionar los mejores procesadores, tarjetas gráficas y más para tu configuración ideal.</p>
+                <a href="/blog/como-elegir-componentes-pc" class="cta-button">Leer más</a>
+            </article>
+
+            <article>
+                <h3>Consejos para Mantener Tu PC de Torre en Óptimas Condiciones</h3>
+                <p>Mantener tu PC en buen estado es crucial para su rendimiento. Aquí te damos algunos consejos sobre limpieza, actualizaciones y mantenimiento general.</p>
+                <a href="/blog/consejos-mantenimiento-pc" class="cta-button">Leer más</a>
+            </article>
+
+            <article>
+                <h3>¿Cuándo es Hora de Actualizar Tu Tarjeta Gráfica?</h3>
+                <p>Si te preguntas si es hora de actualizar tu tarjeta gráfica, este artículo te ayudará a identificar los signos de que necesitas una mejora para disfrutar de un mejor rendimiento.</p>
+                <a href="/blog/cuando-actualizar-tarjeta-grafica" class="cta-button">Leer más</a>
+            </article>
+
+            <article>
+                <h3>Errores Comunes al Montar Tu Propia PC de Torre</h3>
+                <p>Montar tu propia PC puede ser emocionante, pero también puede tener sus desafíos. Descubre los errores más comunes que debes evitar para un ensamblaje exitoso.</p>
+                <a href="/blog/errores-comunes-montar-pc" class="cta-button">Leer más</a>
+            </article>
+        </div>
+
         <div class="section" id="contacto">
             <h2>Contáctanos</h2>
             <p>Si tienes un dispositivo que necesita reparación o deseas más información sobre nuestros servicios, no dudes en contactarnos. Estamos a tu disposición.</p>
@@ -176,22 +241,36 @@
             <p><strong>Email:</strong> smart.fix.contacto1@gmail.com</p>
         </div>
 
+        <div class="section">
+            <h2>Formulario de Contacto</h2>
+            <form action="enviar_mensaje.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="cta-button">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2024 Smart Fix - Todos los derechos reservados</p>
+        <p>&copy; 2024 Smart Fix. Todos los derechos reservados.</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" title="Facebook" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"><path d="..."/></svg>
-            </a>
-            <a href="https://x.com/SmartFi37836511?t=2pjTBMvyEkiiuTUKQQ64Fg&s=09" target="_blank" title="Twitter" aria-label="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"><path d="..."/></svg>
-            </a>
-            <a href="https://www.instagram.com/smartfixig/profilecard/?igsh=MWN5MTU4amswb2NoZA==" target="_blank" title="Instagram" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"><path d="..."/></svg>
-            </a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
         </div>
-        <p><a href="/privacy-policy" style="color:white;">Política de Privacidad</a> | <a href="/terms" style="color:white;">Términos de Servicio</a></p>
     </footer>
 
 </body>
